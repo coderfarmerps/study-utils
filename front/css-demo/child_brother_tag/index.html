@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body div{
+            background: blue;
+        }
+        body > div{
+            background: red;
+        }
+        strong + div{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>老大标签</h1>
+        <div>
+            <strong>老二标签</strong>
+        </div>
+    </div>
+
+    <div>
+        <strong>父级邻居</strong>
+        <div>
+            邻居家的孩子
+        </div>
+        <div>
+            邻居家的老二
+        </div>
+    </div>
+</body>
+</html>
