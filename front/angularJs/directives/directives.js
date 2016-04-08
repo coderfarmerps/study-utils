@@ -1,7 +1,6 @@
 /**
  * filterHead: table head @NotNull
  * filterList: table body @NotNull
- * filterName: search propertyName @NotNull
  * selectedList: select result list @return
  * isWatchList: is need watch filterList change(for ajax) @NotNeed can use angular.extend(scope.filterList, response.list) replace
  *
@@ -33,7 +32,6 @@ app.directive('tableRowSelect', function ($filter,$timeout) {
     scope:{
       filterHead: '=head',
       filterList: '=list',
-      filterName: '=name',
       selectedList: '=selected',
       isWatchList: '='
     },
@@ -51,18 +49,21 @@ app.directive('tableRowSelect', function ($filter,$timeout) {
       }
 
       scope.$watch('filterValue', function (newValue, oldValue) {
-        if(!newValue) {
-          scope.list = scope.filterList;
-          return
-        }
         if(newValue == oldValue) return;
+        scope.changeSelectType();
+      });
 
+      scope.changeSelectType = function () {
+        if(!scope.filterValue) {
+          scope.list = scope.filterList;
+          return;
+        }
         var tmp = [];
         scope.filterList.forEach(function (item) {
-          if(item[scope.filterName].indexOf(newValue) >= 0)tmp.push(item);
+          if(item[scope.filterName].indexOf(scope.filterValue) >= 0)tmp.push(item);
         })
         scope.list = tmp;
-      });
+      }
 
       scope.toggleItem = function (item) {
         if(item.checked){

@@ -1,5 +1,7 @@
-<input type="text" class="form-control mt10" ng-model="filterValue" placeholder="让选择更简单..."/>
-<table class="table table-bordered table-hover mt10">
+<input type="text" style="margin-right: -1px;display:inline-block;width:60%" class="form-control" ng-model="filterValue" placeholder="让选择更简单..."/>
+<select class="form-control" style="margin-left: -1px;display:inline-block;width:40%;vertical-align: bottom;" ng-model="filterName" ng-options="item.propertyName as item.displayName for item in filterHead" ng-change="changeSelectType()">
+</select>
+<table class="table table-bordered table-hover" style="margin-top:10px">
     <thead>
         <tr>
             <th>
