@@ -1,4 +1,4 @@
-package com.mrlu.bigData.excel;
+package com.mrlu.bigData.excel2mysql;
 
 /**
  * Created by stefan on 16-3-30.
@@ -11,5 +11,4 @@ public class Constants {
     public static final String jdbcUserName="xxx";
     public static final String jdbcPassword="xxx";
     public static final String prepareSql="xxx";
-
 }

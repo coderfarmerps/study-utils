@@ -1,4 +1,4 @@
-package com.mrlu.bigData.excel;
+package com.mrlu.bigData.excel2mysql;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
@@ -9,6 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Date;
 
 /**
  * Created by stefan on 16-3-28.
@@ -32,6 +33,7 @@ public class CSV2MySQL {
 
     @Test
     public void csv2MySQl(){
+        System.out.println("start Time: " + (new Date()));
         String path = Constants.cvsPath;
         File file = new File(path);
         if(!file.exists()){
@@ -72,6 +74,7 @@ public class CSV2MySQL {
                 e.printStackTrace();
             }
         }
+        System.out.println("end Time: " + (new Date()));
     }
 
     private String trimString(String originStr) {

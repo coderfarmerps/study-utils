@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fields>
+    <field 	name="接待时间" 					property="day"  order="1"/>
+    <field 	name="公司" 			property="property_name" order="2"/>
+    <field 	name="项目" 		property="project_name" order="3"/>
+    <field 	name="分期" 			property="group_name" order="4"/>
+    <field 	name="报事来源" 			property="repair_source" order="5"/>
+    <field 	name="报事类型" 				property="repair_type" order="6"/>
+    <field  name="接待描述" property="content" order="7"/>
+    <field 	name="房间交付状态" 				property="room_status" order="8"/>
+    <field 	name="房间类型" 		property="room_type" order="9"/>
+    <field 	name="原因大类" 		property="reason_1" order="10"/>
+    <field 	name="原因细类" 	property="reason_2" order="11"/>
+</fields>

@@ -15,7 +15,7 @@
    limitations under the License.
 ==================================================================== */
 
-package com.mrlu.bigData.excel;
+package com.mrlu.bigData.excel2mysql;
 
 import java.io.File;
 import java.io.IOException;
